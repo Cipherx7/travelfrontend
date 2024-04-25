@@ -26,7 +26,7 @@ export const Payment = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          `https://travelapp.cyclic.app/api/hotels/${id}`
+          `https://frantic-bass-scrubs.cyclic.app/api/hotels/${id}`
         );
         setSingleHotel(data);
       } catch (err) {
@@ -58,12 +58,12 @@ export const Payment = () => {
     }
 
     const options = {
-      key: "rzp_test_VSdp7X3K39GwBK",
+      key: "rzp_test_B5JJM1TRg6QPGB",
       amount: totalPayableAmount * 100,
       currency: "INR",
       name: "TravelO",
-      email: "sakari@gmail.com",
-      contact: "9876543210",
+      email: "siddhesh4215@gmail.com",
+      contact: "9373005107",
       description: "Thank you for booking with us",
 
       handler: ({ payment_id }) => {
@@ -75,9 +75,9 @@ export const Payment = () => {
         navigate("/order-summary");
       },
       prefill: {
-        name: "Prakash Sakari",
-        email: "sakari@gmail.com",
-        contact: "9876543210",
+        name: "Siddhesh Darade",
+        email: "siddhesh4215@gmail.com",
+        contact: "9373005107",
       },
     };
 
